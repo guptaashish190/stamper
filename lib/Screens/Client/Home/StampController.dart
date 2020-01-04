@@ -26,19 +26,20 @@ class StampController extends StatelessWidget {
               ),
             ),
             Expanded(
-                child: FlatButton(
-              onPressed: () {},
-              child: Text('STAMP \nIN',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: secondary2,
-                    fontSize: 30.0,
-                    shadows: <Shadow>[
-                      Shadow(blurRadius: 7, color: brighter),
-                    ],
-                    fontWeight: FontWeight.w700,
-                  )),
-            ))
+              child: FlatButton(
+                onPressed: () {},
+                child: Text('STAMP \nIN',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: secondary2,
+                      fontSize: 30.0,
+                      shadows: <Shadow>[
+                        Shadow(blurRadius: 7, color: brighter),
+                      ],
+                      fontWeight: FontWeight.w700,
+                    )),
+              ),
+            )
           ],
         ));
   }

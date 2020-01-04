@@ -15,42 +15,62 @@ class AttendanceCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
             gradient: LinearGradient(colors: <Color>[secondary1, secondary2])),
-        child: Column(
+        child: Row(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: <Widget>[
-                  Text(
-                    'STAMP-IN: ',
-                    style:
-                        TextStyle(color: mainText, fontWeight: FontWeight.bold),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        'STAMP-IN: ',
+                        style: TextStyle(
+                            color: mainText, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        data.stampin,
+                        style: TextStyle(
+                            color: mainText2, fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
-                  Text(
-                    data.stampin,
-                    style:
-                        TextStyle(color: mainText2, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: <Widget>[
-                  Text(
-                    'STAMP-OUT: ',
-                    style:
-                        TextStyle(color: mainText, fontWeight: FontWeight.bold),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        'STAMP-OUT: ',
+                        style: TextStyle(
+                            color: mainText, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        data.stampout,
+                        style: TextStyle(
+                            color: mainText2, fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
-                  Text(
-                    data.stampout,
-                    style:
-                        TextStyle(color: mainText2, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
+                ),
+              ],
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                IconButton(
+                  color: Colors.white70,
+                  icon: Icon(Icons.info),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  color: Colors.red[300],
+                  icon: Icon(Icons.delete),
+                  onPressed: () {},
+                ),
+              ],
+            )
           ],
         ));
   }
