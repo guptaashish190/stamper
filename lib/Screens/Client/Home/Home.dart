@@ -7,6 +7,9 @@ class ClientHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: Drawer(
+          child: Container(),
+        ),
         backgroundColor: background,
         appBar: AppBar(
           backgroundColor: appBar,
