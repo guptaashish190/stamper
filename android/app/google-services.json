@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "446648436718",
+    "firebase_url": "https://stamper-aab59.firebaseio.com",
+    "project_id": "stamper-aab59",
+    "storage_bucket": "stamper-aab59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446648436718:android:e8b544302f05e264c530ff",
+        "android_client_info": {
+          "package_name": "unitas.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446648436718-i8lmq4m3ohkoeop9r8cm7m501857ip7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOlpPcvxs5CNsb20MTCdiqDJXIkmqO-Bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446648436718-i8lmq4m3ohkoeop9r8cm7m501857ip7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

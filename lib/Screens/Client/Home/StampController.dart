@@ -1,5 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/Constants/Colors.dart';
+import 'package:flutter_app/Models/Location.dart';
+import 'package:flutter_app/Models/Stamp.dart';
 
 class StampController extends StatefulWidget {
   @override
@@ -9,7 +12,38 @@ class StampController extends StatefulWidget {
 class _StampControllerState extends State<StampController> {
   bool stamped = false;
 
+  final String empid = 'RCJb1EjrXz7NcUi0s4Ea';
+
+  Location stampinLocation;
+  DateTime stampin;
+
+  Stamp getStampSession() {
+    Stamp session = Stamp(
+        stampinLocation: stampinLocation,
+        stampin: stampin,
+        stampout: DateTime.now(),
+        stampoutLocation: Location(
+          latitude: 12.5122,
+          longitude: 12.121,
+          title: 'Office',
+        ));
+    return session;
+  }
+
   void toggleStamped() {
+    if (stamped == false) {
+      setState(() {
+        stampinLocation =
+            Location(latitude: 12.5122, longitude: 12.121, title: 'Ahska');
+        stampin = DateTime.now();
+      });
+    } else {
+      Stamp session = this.getStampSession();
+      Firestore.instance
+          .collection('emps/$empid/stamps')
+          .add(Stamp.getMap(session))
+          .then((value) => print("Stamped in db"));
+    }
     setState(() {
       stamped = !stamped;
     });
